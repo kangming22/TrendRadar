@@ -7,7 +7,7 @@ crawler:
   request_interval: 1000 # 请求间隔(毫秒)
   enable_crawler: true # 是否启用爬取新闻功能，false 时直接停止程序
   use_proxy: false # 是否启用代理，false 时为关闭
-  default_proxy: "http://127.0.0.1:10086"
+  default_proxy: "http://127.0.0.1:10086"            
 
 # 🔸 daily（当日汇总模式）
 #   • 推送时机：按时推送
@@ -25,14 +25,14 @@ crawler:
 #   • 适用场景：避免重复信息干扰
 
 report:
-  mode: "current" # 可选: "daily"|"incremental"|"current"  
+  mode: "incremental" # 可选: "daily"|"incremental"|"current"            
   rank_threshold: 5 # 排名高亮阈值
 
 notification:
   enable_notification: true # 是否启用通知功能，false 时不发送手机通知
   message_batch_size: 4000 # 消息分批大小（字节）(这个配置别动)
   batch_send_interval: 1 # 批次发送间隔（秒）
-  feishu_message_separator: "━━━━━━━━━━━━━━━━━━━" # feishu 消息分割线
+  feishu_message_separator: "━━━━━━━━━━━━━━━━━━━" # feishu 消息分割线  
 
   webhooks:
     feishu_url: "" # 飞书机器人的 webhook URL
