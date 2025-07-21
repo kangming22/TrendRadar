@@ -2,8 +2,8 @@ name: Hot News Crawler
 
 on:
   schedule:
-    - cron: "*/10 * * * *" # 每 30 分钟运行一次
-  workflow_dispatch:
+    - cron: "*/2 * * * *" # 每 30 分钟运行一次
+  workflow_dispatch:  
 
 # 添加权限设置
 permissions:
@@ -32,7 +32,7 @@ jobs:
           echo "🔍 检查必需的配置文件..."
 
           if [ ! -f config/config.yaml ]; then
-            echo "❌ 错误: config/config.yaml 文件不存在"
+            echo "❌ 错误: config/config.yaml 文件不存在"  
             echo "请参考项目文档创建配置文件"
             exit 1
           fi
